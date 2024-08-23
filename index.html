@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coleta de Dados do Futebol</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Coleta de Dados Futebol</h1>
+                
+    </header>
+    <main>
+       
+        <section class="form-section">
+            <label for="date">Data:</label>
+            <input type="date" id="date">
+            
+            <label for="location">Local:</label>
+            <input type="text" id="location">
+            
+            <label for="team1">Time 1:</label>
+            <input type="text" id="team1">
+            
+            <label for="team2">Time 2:</label>
+            <input type="text" id="team2">
+        </section>
+
+        <section class="form-section">
+            
+            <div class="player-buttons">
+                <!-- Criar botões para os 11 jogadores -->
+                 <h2>Selecione o Jogador</h2>
+                <button id="player1" onclick="selectPlayer(1)">Jogador 1</button>
+                <button id="player2" onclick="selectPlayer(2)">Jogador 2</button>
+                <button id="player3" onclick="selectPlayer(3)">Jogador 3</button>
+                <button id="player4" onclick="selectPlayer(4)">Jogador 4</button>
+                <button id="player5" onclick="selectPlayer(5)">Jogador 5</button>
+                <button id="player6" onclick="selectPlayer(6)">Jogador 6</button>
+                <button id="player7" onclick="selectPlayer(7)">Jogador 7</button>
+                <button id="player8" onclick="selectPlayer(8)">Jogador 8</button>
+                <button id="player9" onclick="selectPlayer(9)">Jogador 9</button>
+                <button id="player10" onclick="selectPlayer(10)">Jogador 10</button>
+                <button id="player11" onclick="selectPlayer(11)">Jogador 11</button>
+            </div>
+        </section>
+
+        <section class="form-section">
+            <div class="action-buttons">
+                <!-- Botões para as ações realizadas -->
+                <h2>Selecione a Ação</h2>
+                <button onclick="selectAction('passe')">Passe</button>
+                <button onclick="selectAction('finalizacao')">Finalização</button>
+                <button onclick="selectAction('cabeceio')">Cabeceio</button>
+                <button onclick="selectAction('escanteio')">Escanteio</button>
+                <button onclick="selectAction('falta')">Falta</button>
+            </div>
+        </section>
+            
+            <button onclick="addData()">Adicionar Dados</button>
+            <button onclick="clearData()">Limpar Dados</button></br>
+       
+
+        <section class="table-section">
+            <table id="dataTable">
+                <thead>
+                    <tr>
+                        <th>Data</th>
+                        <th>Local</th>
+                        <th>Time 1</th>
+                        <th>Time 2</th>
+                        <th>Jogador</th>
+                        <th>Ação</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+            <button onclick="exportCSV()">Exportar para CSV</button>
+        </section>
+    </main>
+    <script src="script/script.js"></script>
+</body>
+</html>
